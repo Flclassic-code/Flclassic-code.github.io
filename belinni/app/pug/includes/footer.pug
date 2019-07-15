@@ -1,0 +1,58 @@
+// begin footer
+footer.footer#section6
+	.container
+		.row
+			.col-12.col-md-6.col-lg-4.order-2.order-md-1
+				a.logo-footer.d-none.d-md-block(href="#")
+					img(src="../img/logo.png", alt="img")
+				+b.local
+					+e.adress
+						span Address:
+						br
+						|м.Трускавець, пл.Кобзаря, 1
+					+e.number
+						span Telephone: 
+						a(href="tel:+380 3247 66-222")
+							| +380 3247 66-222
+					+e.email
+						span E-mail: 
+						a(href="mailto:mirotel@mail.com")
+							| mirotel@mail.com
+			.col-md-6.col-lg-4.order-3.order-md-3.order-lg-2
+				.slider-response відгуки наших гостей
+					+b.slider-response-item.d-flex.justify-content-between.flex-column
+						+e.p
+							|"Чарівне місце."
+						+e.h
+							|Себастян Чорба
+					+b.slider-response-item.d-flex.justify-content-between.flex-column
+						+e.p
+							|"Відмінне меню. Чудові види. Приємна атмосфера."
+						+e.h
+							|Юлія Колінко
+					+b.slider-response-item.d-flex.justify-content-between.flex-column
+						+e.p
+							|"Кращий заклад в Трускавці. Кухня по праву вишукана. Вид на все."
+						+e.h
+							|Володя Хорольский
+				.response-md-wrap.d-blok.d-md-flex.justify-content-between.align-items-center
+					.response.d-flex.justify-content-start.align-items-center
+						span.icon-span
+							i.icon-google
+						a.response-txt(href="https://search.google.com/local/writereview?placeid=ChIJY069ha1JOkcRkiuM4VoDUgY" target="_blank") Залишити відгук
+					ul.socials-wrap.d-flex.justify-content-start
+						li
+							a(href="#").socials-item.socials-item_instagram
+								i.icon-instagram
+						li
+							a(href="#").socials-item.socials-item_facebook
+								i.icon-facebook
+			.col-12.col-md-6.col-lg-4.order-1.order-md-2.order-lg-4
+				.form-header
+					|Залиште свої дані, і тоді Ви першим дізнаватиметесь про наші спеціальні пропозиції, акції та гастрономічні заходи.
+				form(action="sendmail.php" method="post")
+					input.imput-form(type="text" placeholder="Введите Ваше имя" name="name")
+					input.imput-form(type="tel" placeholder="+38 (___) ___-__-__" name="phone" data-req="1")
+					input.imput-form(type="email" placeholder="E-mail" name="email")
+					button(type="submit" class="send") Відправити				
+// end footer

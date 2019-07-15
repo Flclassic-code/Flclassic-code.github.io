@@ -1,0 +1,381 @@
+extends layout/layout
+append config
+	- var pageTitle = 'main-page';
+
+block main
+	.bg-section(style="background-image: url('../img/header.jpg')")
+		include includes/header.pug
+		// begin section-1
+		section.section-1
+			.container.d-flex.justify-content-center.align-items-center
+				+b.group-contacts
+					+e.logo(style="background-image: url('../img/logo-wht.svg')")
+					+e.location
+						i.icon.icon-location
+						span м.Трускавець, пл.Кобзаря, 1
+					+e.inf.d-blok.d-md-flex.justify-content-center
+						+e.time
+							i.icon.icon-clock
+							span 10:00 am - 11:00 pm  
+						+e.phone
+							i.icon.icon-phone
+							a(href="tel:+380 3247 66-222") +380 3247 66-222
+					+e.txt
+						|Насолоджуйтесь неперевершеними смаками страв у п'ятизірковому готелі 
+						br
+						|Mirotel Resort & Spa
+		// end section-1
+	// begin section-2
+	section.section-2#section2
+		.container
+			.row.d-flex.justify-content-between
+				.col-12.col-lg-6
+					+b.about-us
+						+e.item-1 Wellcome
+						+e.item-2 TO OUR RESTAURANT
+						+e.item-3
+							|Would you like to savor the exquisite cuisine and bring the art of dining to a new level? We obtain the freshest products from reputable purveyors and incorporate them into our exclusive dishes. Our menus are influenced by culinary traditions of Europe, Far East and other parts of the world. We are open to experiments and often add new dishes to our a la carte menu. Our courteous and attentive waiters in smoking jackets will bring you anything you wish.
+				.col-12.col-lg-6
+					.about-vid
+						iframe(width='560', height='335', src='https://www.youtube.com/embed/Rge4TTL0TEA', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+	// end section-2
+	.parallax-window(data-parallax='scroll', data-image-src='img/bg-form.jpg')
+		.container
+			.h1.h1_paralax Our Menu
+			ul.list-inline
+				li BREAKFASTS
+				li Lunches
+				li Dinners
+	// begin section-3
+	section.section-3#section3
+		.container
+			ul.menu-tabs-list.d-blok.d-md-flex.justify-content-center
+				li.active-list
+					|all
+				li
+					|breakfast
+				li
+					|lunches
+				li
+					|dinners
+				li
+					|desserts
+				li
+					|drinks
+			.tabs-content-wrap
+				.tab-content-box.d-flex.flex-wrap.justify-content-left.tab-content-active
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+				//tab-content-box	
+				.tab-content-box.d-flex.flex-wrap.justify-content-left
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					//tab-content-box
+				.tab-content-box.d-flex.flex-wrap.justify-content-left
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					//tab-content-box
+				.tab-content-box.d-flex.flex-wrap.justify-content-left
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					//tab-content-box
+				.tab-content-box.d-flex.flex-wrap.justify-content-left
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					//tab-content-box
+				.tab-content-box.d-flex.flex-wrap.justify-content-left
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					+b.tab-item
+						+e.h-pricing
+							+e.name Old Timer's Breakfast
+							+e.dots
+							+e.price ₴220
+						+e.p
+							|( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter  )
+					//item
+					//tab-content-box
+			// tabs-content-wrap
+	// end section-3
+	// begin section-4
+	section.section-4#section4
+		.parallax-window-2(data-parallax='scroll', data-image-src='../img/paralax-2.jpg')
+			.container
+				.h1.h1_paralax Our Gallery
+				ul.list-inline
+					li CHECKOUT OUR SPACE
+		.gallery-wrap
+			.container
+				.row.d-flex.justify-content-center
+					.col-lg-4.col-md-10
+						a.grid-item.grid-item--width1.order-1(href='../img/gallery-1.jpg', data-fancybox='images', data-caption='My caption')
+							img(src='../img/gallery-1.jpg', alt='gallery')
+						// /grid-item
+						.wrap-column-img.d-flex.justify-content-between.order-2
+							a.grid-item.grid-item--width2(href='../img/gallery-2.jpg', data-fancybox='images', data-caption='My caption')
+								img(src='../img/gallery-2.jpg', alt='gallery')
+							// /grid-item
+							a.grid-item.grid-item--width2(href='../img/gallery-3.jpg', data-fancybox='images', data-caption='My caption')
+								img(src='../img/gallery-3.jpg', alt='gallery')
+							// /grid-item
+					.col-lg-4.d-flex.flex-column.col-md-10
+						a.grid-item.grid-item--width1.order-1.order-lg-2(href='../img/gallery-4.jpg', data-fancybox='images', data-caption='My caption')
+							img(src='../img/gallery-4.jpg', alt='gallery')
+						// /grid-item
+						.wrap-column-img.d-flex.justify-content-between.order-1.order-lg-1
+							a.grid-item.grid-item--width2(href='../img/gallery-5.jpg', data-fancybox='images', data-caption='My caption')
+								img(src='../img/gallery-5.jpg', alt='gallery')
+							// /grid-item
+							a.grid-item.grid-item--width2(href='../img/gallery-6.jpg', data-fancybox='images', data-caption='My caption')
+								img(src='../img/gallery-6.jpg', alt='gallery')
+							// /grid-item
+					.col-lg-4.col-md-10
+						a.grid-item.grid-item--width1.order-1(href='../img/header.jpg', data-fancybox='images', data-caption='My caption')
+							img(src='../img/header.jpg', alt='gallery')
+						// /grid-item
+						.wrap-column-img.d-flex.justify-content-between.order-2
+							a.grid-item.grid-item--width2(href='../img/menu-8840.jpg', data-fancybox='images', data-caption='My caption')
+								img(src='../img/menu-8840.jpg', alt='gallery')
+							// /grid-item
+							a.grid-item.grid-item--width2(href='../img/menu-8830.jpg', data-fancybox='images', data-caption='My caption')
+								img(src='../img/menu-8830.jpg', alt='gallery')
+							// /grid-item
+	// end section-4
+	// begin section-5
+	section.section-5#section5
+		.parallax-window-3(data-parallax='scroll', data-image-src='../img/header.jpg')
+			.container
+				.h1.h1_paralax Events
+				//- ul.list-inline
+					//- li CHECKOUT OUR SPACE
+		.container
+			.arrow-wrap
+				.arrow-next.d-flex.align-items-center.justify-content-center
+					i.icon-arrow-right
+				.arrow-prev.d-flex.align-items-center.justify-content-center
+					i.icon-arrow-left
+				.events-slider
+					.events-item
+						.row
+							.col-lg-8
+								+b.date-event
+									+e.number.d-flex.align-items-center.justify-content-center 14
+									+e.month.d-flex.align-items-center.justify-content-center січ
+								// /-date-event
+								img.img-events(src="../img/sldr1.jpg", alt="events-img")
+							.col-lg-4
+								+b.event-post
+									+e.post-header Fish Market Dinner
+									+e.post-body
+										|Ми запропонуємо Вашій увазі найсвіжіші устриці. Завітайте у BELLINI'S PIANO BAR & GRIL та подаруйте собі гастрономічне свято під чаруючі звуки саксофону та роялю!
+								// /-event-post
+								+b.event-post-date-time.d-flex.justify-content-start
+									+e.date
+										i.icon.icon-calendar
+										span 14 січня 2019
+									+e.time
+										i.icon.icon-clock
+										span 9:00
+					// /events-item
+					.events-item
+						.row
+							.col-lg-8
+								+b.date-event
+									+e.number.d-flex.align-items-center.justify-content-center 14
+									+e.month.d-flex.align-items-center.justify-content-center січ
+								// /-date-event
+								img.img-events(src="../img/sldr3.jpg", alt="events-img")
+							.col-lg-4
+								+b.event-post
+									+e.post-header NEW YEAR 2019
+									+e.post-body
+										|Ми запропонуємо Вашій увазі найсвіжіші устриці. Завітайте у BELLINI'S PIANO BAR & GRIL та подаруйте собі гастрономічне свято під чаруючі звуки саксофону та роялю!
+								// /-event-post
+								+b.event-post-date-time.d-flex.justify-content-start
+									+e.date
+										i.icon.icon-calendar
+										span 14 січня 2019
+									+e.time
+										i.icon.icon-clock
+										span 9:00
+					// /events-item
+	// end section-5
+	include includes/footer.pug
+	//- .up-button
+	//- include includes/modals.pug
+	//- include includes/button-menu.pug
+	//- include includes/btns.pug
+
+
+	
+	
