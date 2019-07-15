@@ -4,3 +4,11 @@
   width: $width;
   height: $height;
 }
+
+@function height($full, $target ) {
+    @return 100% / ($full / $target )
+  }
+
+  @function per($tar, $full:map-get($container-max-widths, xl) - 30px ) {
+    @return percentage($tar / $full)
+  }

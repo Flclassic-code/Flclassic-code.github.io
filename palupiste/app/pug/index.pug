@@ -1,0 +1,297 @@
+extends layout/layout
+append config
+	- var pageTitle = 'main-page'
+
+block main
+	.header-dark
+		.container
+			.row
+				.col-lg-2.col-md-4.col-6
+					a.number-call(href="tel:+358195232312")
+						.icon.icon-mobile
+						span +358 19 523 2312
+				.col-lg-2.col-md-4.col-6
+					a.email-adr(href="mailto:youremailaddress")
+						.icon.icon-mail2
+						span info@paalupiste.com
+				.col-lg-3.col-md-4.col-12
+					ul.socials-list.float-right.float-lg-none
+						li
+							a(href="#")
+								.icon.icon-facebook
+						li
+							a(href="#")
+								.icon.icon-twitter
+						li
+							a(href="#")
+								.icon.icon-instagram
+						li
+							a(href="#")
+								.icon.icon-linkedin
+						li
+							a(href="#")
+								.icon.icon-youtube
+				.col-lg-6
+	include includes/header.pug
+	// begin section-1
+	section.section-1
+		.slider-one
+			.slide(style="background-image: url('img/slide-bg.png');")
+				.container
+					+b.slide-baner
+						+e.h1 Screw piles
+						+e.h2 For faster foundations
+						ul.baner-list
+							li
+								.icon.icon-checkmark
+								span No excavation, soil removal, or concrete works
+							li
+								.icon.icon-checkmark
+								span Cheaper than concrete foundations
+			//slide-end
+			.slide(style="background-image: url('img/slide-bg.png');")
+				.container
+					+b.slide-baner
+						+e.h1 Screw piles
+						+e.h2 For faster foundations
+						ul.baner-list
+							li
+								.icon.icon-checkmark
+								span No excavation, soil removal, or concrete works
+							li
+								.icon.icon-checkmark
+								span Cheaper than concrete foundations
+			//slide-end
+		.arrow-sl-one-next.arrow-prev
+		.arrow-sl-one-prev.arrow-next
+	// end section-1
+	// begin section-2
+	section.section-2
+		.container
+			.row
+				.col-lg-6.col-md-6
+					.inf-block
+						+b.inf-header.d-flex.justify-content-left.align-items-center
+							+e.header-left
+								img(src="../img/helix.png", alt="logo")
+							+e.header-right
+								|Hand Installation
+						// header-end
+						ul.inf-block-list
+							li
+								.pic-1
+								span DIY
+							li
+								.icon.icon-checkmark
+								span Perfect foundations for patios, fences, garages, or sheds.
+							li
+								.icon.icon-checkmark
+								span Done by hand, in minutes!
+							li
+								.icon.icon-checkmark
+								span Cost effective vs. traditional methods
+							li
+								.icon.icon-checkmark
+								span Quick and easy hand installation possible
+						// list-end						
+						a.see-next.d-flex.justify-content-left.align-items-center(href='#')
+							span SEE MORE BENEFITS 
+							.icon.icon-arrow-right2
+					// inf-block-end
+				.col-lg-6.col-md-6
+					.inf-block
+						+b.inf-header.d-flex.justify-content-left.align-items-center
+							+e.header-left
+								img.pr(src="../img/pro.png", alt="logo")
+							+e.header-right
+								|Machine Installation
+						// header-end
+						ul.inf-block-list
+							li
+								.pic-2
+								span ROFESSIONALS
+							li
+								.icon.icon-checkmark
+								span High-strength foundations for cottages, heavy walls, homes, air domes, and more.
+							li
+								.icon.icon-checkmark
+								span Machine-installed with mounted rotators Install your foundation in minutes
+							li
+								.icon.icon-checkmark
+								span Get installation services, equipment rental, or expert advice from our professional staff
+						// list-end						
+						a.see-next.d-flex.justify-content-left.align-items-center(href='#')
+							span SEE MORE BENEFITS
+							.icon.icon-arrow-right2
+					// inf-block-end
+					// .inf-block
+	// end section-2
+	// begin section-3
+	section.section-3(style="background-image: url('img/bg-2.png');")
+			+b.header-section-3
+				+e.h2 MANY YEARS OF EXPERIENCE
+				+e.h1 Best products on the market
+			.video-block(style="background-image: url('img/video-block.png');")
+				a.button-play.icon-youtube#video-play(href='#modal-video')
+	// begin section-4
+	section.section-4
+		.container
+			+b.header-section-4
+				+e.h1 Paalupiste offers a comprehensive range of hand and machine installed screw piles, which are suitable for both professionals and DIY enthusiasts. 
+				+e.h2
+					|Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction.
+					br
+					|Durable foundations easily and cost-effectively - contact Paalupiste or your nearest screw piles retailer!
+				br
+				a.button(href="#") VIEW ALL PROJECTS
+	// end section-4
+	// begin section-5
+	section.section-5
+		.container
+			.row
+				.col-lg-6.col-md-7.order-2.order-lg-1
+					+b.content-wrap
+						+e.header Why us
+						+e.txt
+							|Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction.
+						+e.txt
+							|Paalupiste offers a comprehensive range of hand and machine installed screw piles, which are suitable for both professionals and DIY enthusiasts. 
+						+e.txt
+							|Durable foundations easily and cost-effectively - contact Paalupiste or your nearest screw piles retailer!
+					.button READ MORE
+				.col-lg-6.col-12.order-1.order-lg-2
+					+b.about-us-pic-block.d-flex.flex-wrap
+						+e.item
+							.pic.pic-3
+						+e.item
+							.pic.pic-4
+							span Screw piles in use
+						+e.item
+							.pic.pic-5
+							span Screw pile installation
+						+e.item
+							.pic.pic-6
+							span Your nearest retailer	
+	// end section-5
+	// begin section-6
+	section.section-6
+		.slide-category-wrap
+			.arrow-cat-one-next.arrow-prev
+			.arrow-cat-one-prev.arrow-next
+			.slider-category
+				.sl-item(style="background-image: url('img/sl-1.png');")
+					.h1 Houses
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-2.png');")
+					.h1 Installation
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-3.png');")
+					.h1 Fences
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-4.png');")
+					.h1 lorem
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-5.png');")
+					.h1 Fences
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-3.png');")
+					.h1 Fences
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='#')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-4.png');")
+					.h1 lorem
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+				.sl-item(style="background-image: url('img/sl-5.png');")
+					.h1 Fences
+					+b.sl-hover
+						+e.head Other applications
+						+e.txt Rotated into the ground, the screw pile is a fast and effortless foundation method for all types of construction..
+						a.read-more.d-flex.justify-content-between(href='')
+							span read more
+							.icon.icon-arrow-right2
+		// end-slider
+		.container
+			.category-pic-head Services Available
+			.row
+				.col-lg-4.col-md-4.col-12
+					.category-pic
+						img(src='../img/pic-7.png', alt='')
+						span Screw pile design service
+				.col-lg-4.col-md-4.col-12
+					.category-pic
+						img(src='../img/pic-8.png', alt='')
+						span Equipment (sales/rental)
+				.col-lg-4.col-md-4.col-12
+					.category-pic
+						img(src='../img/pic-9.png', alt='')
+						span Installation service
+	// end section-6
+	// begin section-7
+	section.section-7
+		.container
+			.row
+				.col-12
+					.slider-our-partners-header Our Partners
+					.slider-our-partners
+						.sl-part-pic
+							img(src='../img/krauta.png', alt='')
+						.sl-part-pic
+							img(src='../img/taloonn.png', alt='')
+						.sl-part-pic
+							img(src='../img/krauta.png', alt='')
+						.sl-part-pic
+							img(src='../img/taloonn.png', alt='')
+						.sl-part-pic
+							img(src='../img/tab.png', alt='')
+						.sl-part-pic
+							img(src='../img/hansa.png', alt='')
+						.sl-part-pic
+							img(src='../img/siesta.png', alt='')
+			.arrow-prt-prev.arrow-prev
+			.arrow-prt-next.arrow-next 
+	// end section-7
+	.modal-video#modal-video
+		iframe#video(width='760', height='515', src='https://www.youtube.com/embed/yMabKBVyXGQ?rel=0d' , frameborder='0', allowfullscreen='')
+	include includes/footer.pug
+	//- include includes/modals.pug
+	//- include includes/form.pug
+	//- include includes/button-menu.pug
+	// begin section-1
+
+
+
+	

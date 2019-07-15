@@ -1,0 +1,25 @@
+{
+  "config": {
+    "src": {
+        "root"         : "app",
+        "templates"    : "app/pug",
+        "css"          : "app/css",
+        "fonts"        : "app/fonts",
+        "sass"         : "app/sass",
+        "js"           : "app/js",
+        "img"          : "app/img",
+        "htmlIncl"     : "app/htmlIncl",
+        "sprite"       : "app/img/sprite",
+        "phpMailer"    : "app/PHPMailer",
+        "sendmail"     : "app/sendmail.php"
+    },
+    "dest": {
+        "root"         : "build",
+        "css"          : "build/css",
+        "js"           : "build/js",
+        "img"          : "build/img",
+        "fonts"        : "build/fonts",
+        "phpMailer"    : "build/PHPMailer"
+    }
+  }
+}

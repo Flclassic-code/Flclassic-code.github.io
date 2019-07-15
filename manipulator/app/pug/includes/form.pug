@@ -1,0 +1,21 @@
+form.calc(action="sendmail.php" method="post")
+	.row.d-flex.align-items-center
+		.col-lg-3.col-md-6.col-sm-12
+			.input-wrap
+				input.input-form(type="text" placeholder="Имя" name="name")
+				img(src="../img/name.svg", width='14', height='14', alt="")
+		.col-lg-3.col-md-6.col-sm-12
+			.input-wrap
+				input.input-form(type="tel" placeholder="Телефон" name="phone" data-req="1")
+				img(src="../img/phone-input.svg", width='14', height='14', alt="")
+			//- input(type="email" placeholder="E-mail" name="email")
+		.col-lg-3
+			button(type="submit" class="send" disabled) Отправить заказ
++b.checkbox-wrap.d-flex.justify-content-start
+	+e.checkbox-item#check
+		.active-check
+	+e.txt
+		| Нажимая кнопку “Отправить заказ”, я подтверждаю, что ознакомлен и согласен 
+		br
+		|с условиями политики обработки 
+		a(href="#") персональных данных

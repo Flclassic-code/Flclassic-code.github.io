@@ -1,9 +1,11 @@
 @import "_hamburgers.scss";
 
 @import "_header-fixed"; // fixed with animation
-.hamburger{
+
+.hamburger {
     float: right;
 }
+
 header.header {
     min-height: 80px;
     z-index: 1;
@@ -15,15 +17,18 @@ header.header {
         // background-color: $colortxt;
         // min-height: 100%;
     }
-        @include media-breakpoint-down(sm) {
-            min-height: 65px;
-        }
+
+    @include media-breakpoint-down(sm) {
+        min-height: 65px;
+    }
+
     img {
         width: 212px;
         height: auto;
-                @include media-breakpoint-down(sm) {
-                    width: 160px;
-                }
+
+        @include media-breakpoint-down(sm) {
+            width: 160px;
+        }
     }
 
     &::after {
@@ -57,7 +62,7 @@ header.header {
     z-index: 10;
 
     @include media-breakpoint-down(md) {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         // display: block;
@@ -67,7 +72,7 @@ header.header {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
         transition: .5s;
-        // height: 100;
+        height: 100%;
     }
 
     li {
@@ -84,7 +89,8 @@ header.header {
             margin-right: 0;
         }
 
-        &:hover {
+        &:hover,
+        &.active-li {
             a {
                 &::after {
                     width: 100%;
@@ -120,25 +126,6 @@ header.header {
 
 .active-li {
     position: relative;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        background: linear-gradient(90deg, #f14814 0%, #ffad1e 100%);
-        left: 0;
-        width: 100%;
-        height: 2px;
-        bottom: -7px;
-
-        @include media-breakpoint-down(md) {
-            bottom: -7px;
-            width: 20px;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-        }
-    }
 }
 
 .hamburger {
@@ -146,9 +133,10 @@ header.header {
     z-index: 200 !important;
     margin-top: 10px;
     color: #efc391;
-            @include media-breakpoint-down(sm) {
-                margin-top: 5px;
-            }
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 5px;
+    }
 }
 
 .hamburger-inner,

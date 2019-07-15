@@ -1,0 +1,123 @@
+.footer {
+    background-color: #0060B8;
+    min-height: 123px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.menu-footer {
+    li {
+
+        a {
+            margin-right: 20px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: $font;
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: .3s;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+
+          
+
+            &:hover {
+                transition: .3s;
+                color: $color-h;
+            }
+        }
+    }
+}
+
+.logo-footer {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    width: 186px;
+    height: 33px;
+
+    @include media-breakpoint-down(xs) {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+.number-footer {
+    text-align: right;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: $font;
+    color: #FFFFFF;
+    transition: .3s;
+    display: inline-block;
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
+    &:hover {
+        transition: .3s;
+        color: $color-h;
+    }
+}
+.number-list{
+    text-align: right;
+            @include media-breakpoint-down(sm) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+}
+.section-dev {
+    
+    @include media-breakpoint-down(md) {
+        padding-bottom: 20px;
+    }
+
+
+}
+    .a-dev-txt {
+            text-decoration: none;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        font-family: $font;
+        color: #FFFFFF;
+      
+    }
+
+    .a-dev-logo {
+            text-decoration: none;
+
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        margin-left: 5px;
+    }
+.footer-line {
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    font-family: $font;
+    color: #FFFFFF;
+        @include media-breakpoint-down(sm) {
+            font-size: 9px;
+        }
+    span {
+        text-transform: uppercase;
+        font-weight: bold;
+
+    }
+}

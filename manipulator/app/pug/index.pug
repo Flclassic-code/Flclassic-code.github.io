@@ -1,0 +1,730 @@
+extends layout/layout
+append config
+	- var pageTitle = 'main-page';
+
+block main
+	include includes/header.pug
+	// begin section-1
+	section.section-1
+		.slide-item
+			.bg-item.d-flex.align-items-center(style='background-image: url(img/section-1.jpg);')
+				.container
+					+b.baner-blok
+						+e.item-1 Аренда манипулятора
+						+e.item-2 24 часа
+						+e.item-3 Москва и Московская область
+						+e.item-4
+							|Наша компания помогает реализовать любые задачи в той сфере деятельности, где невозможно справиться вручную и человеку на помощь приходит современная техника.
+						a(href="#modal-window").modal-tiger.button.d-flex.align-items-center.justify-content-center Заказать звонок
+						a(href="#").mail manipylator@mail.ru
+		.slide-item
+			.bg-item.d-flex.align-items-center(style='background-image: url(img/section-1.jpg);')
+				.container
+					+b.baner-blok
+						+e.item-1 Аренда манипулятора
+						+e.item-2 24 часа
+						+e.item-3 Москва и Московская область
+						+e.item-4
+							|Наша компания помогает реализовать любые задачи в той сфере деятельности, где невозможно справиться вручную и человеку на помощь приходит современная техника.
+						a(href="#").button.d-flex.align-items-center.justify-content-center Заказать звонок
+						a(href="#").mail manipylator@mail.ru
+	.slide-nav
+		.arrow-prev
+		.arrow-next
+	// end section-1
+	// begin section-2
+	section.section-2
+		.container
+			.about-us
+				|Манипулятор (грузоподъёмное устройство) — многозвенный механизм с приводами в каждом суставе. Применяется для подъема и переноса тяжеловесных грузов. Является сбалансированным манипулятором — груз в грузозахватном устройстве удерживается в любом положении неподвижно. Оператор передвигает груз непосредственно, либо с помощью дистанционного управления. В качестве приводов используются электрическое и гидравлическое оборудованиеей. 
+				br
+				br
+				|Грузовой автомобиль, оснащённый краном-манипулятором заменяет собой грузовой автомобиль и автокран, что позволяет осуществлять перемещение, загрузку и перевозку тяжёлых грузов более экономно. Бывают ситуации, где автокран не справляется со своей задачей из-за своих габаритов. Краны манипуляторы тяжёлых серий мало распространены в России. Это связано с их стоимостью, отсутствием у российских производителей шасси соответствующей грузоподъемности, а также с некоторыми особенностями конструкции: в отличие от автокрана.
+			.h1 техника
+			.category-wrap
+				.category-item
+					a.img-category(href='../img/Rectangle.jpg', data-fancybox='images', data-caption='Манипулятор Mitsubishi fuso')
+						img(src='../img/Rectangle.jpg', alt='')
+					ul.about-item
+						li Манипулятор Mitsubishi fuso
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle.png', data-fancybox='images', data-caption='Манипулятор Hyundai HD 120')
+						img(src='../img/Rectangle.png', alt='')
+					ul.about-item
+						li Манипулятор Hyundai HD 120
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle3.png', data-fancybox='images', data-caption='Манипулятор Daewoo')
+						img(src='../img/Rectangle3.png', alt='')
+					ul.about-item
+						li Манипулятор Daewoo
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle4.png', data-fancybox='images', data-caption='Манипулятор Hyundai HD 170')
+						img(src='../img/Rectangle4.png', alt='')
+					ul.about-item
+						li Манипулятор Hyundai HD 170
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle5.png', data-fancybox='images', data-caption='Манипулятор Камаз 65117')
+						img(src='../img/Rectangle5.png', alt='')
+					ul.about-item
+						li Манипулятор Камаз 65117
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle6.png', data-fancybox='images', data-caption='Манипулятор Volvo')
+						img(src='../img/Rectangle6.png', alt='')
+					ul.about-item
+						li Манипулятор Volvo
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle7.png', data-fancybox='images', data-caption='Манипулятор - Вездеход')
+						img(src='../img/Rectangle7.png', alt='')
+					ul.about-item
+						li Манипулятор - Вездеход
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle8.png', data-fancybox='images', data-caption='Манипулятор Volvo')
+						img(src='../img/Rectangle8.png', alt='')
+					ul.about-item
+						li Манипулятор Камаз 65117
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+				.category-item
+					a.img-category(href='../img/Rectangle9.png', data-fancybox='images', data-caption='Длинномер с манипулятором')
+						img(src='../img/Rectangle9.png', alt='')
+					ul.about-item
+						li Длинномер с манипулятором
+						li.d-flex.justify-content-between
+							span Грузоподъемность кузова
+							span.dots-li
+							span 5 т
+						li
+							span Стрелы
+							span.dots-li
+							span 3 т
+						li
+							span Вылет стрелы
+							span.dots-li
+							span 8 м
+						li
+							span Длина
+							span.dots-li
+							span 5,2 м
+						li
+							span Цена за 1чаc
+							span.dots-li
+							span 1 100 р
+						li
+							span Цена за смену (7+1)
+							span.dots-li
+							span 8 800 р
+						li
+							span Пробег за МКАД
+							span.dots-li
+							span 30 р/км
+						li (Пропуск в центр)
+					.buttons-category.d-flex.justify-content-between.align-items-end
+						a.left-btn.d-flex.align-items-center.justify-content-center(href="#calc-section") Рассчитать
+						a.modal-tiger.right-btn.d-flex.align-items-center.justify-content-center(href="#modal-window") Заказать
+				// category-item-end
+	// end section-2
+	// begin section-3
+	section.section-3
+		.container.d-flex.align-items-top.justify-content-center.justify-content-md-between.flex-wrap.flex-md-nowrap
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-1.svg", width='20', height='20', alt="")
+				+e.txt Работаем
+					br
+					span без посредников
+			// warranties-item-end
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-2.svg", width='30', height='30', alt="")
+				+e.txt
+					span Любая 
+					br
+					|форма оплаты
+			// warranties-item-end
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-3.svg", width='25', height='25', alt="")
+				+e.txt
+					span Аттестованные  
+					br
+					|водители-операторы 
+			// warranties-item-end
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-4.svg", width='26', height='26', alt="")
+				+e.txt
+					|Все машины 
+					br
+					span с пропуском в центр
+			// warranties-item-end
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-5.svg", width='25', height='25', alt="")
+				+e.txt
+					|Прием заказов
+					br
+					| c
+					span 7-24ч
+			// warranties-item-end
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-6.svg", width='25', height='25', alt="")
+				+e.txt
+					span Заключаем договора, 
+					br
+					|выделяем НДС 20%
+			// warranties-item-end
+			+b.warranties-item
+				+e.img
+					img(src="../img/offer-7.svg", width='25', height='25', alt="")
+				+e.txt
+					|Подача 
+					br
+					|от 
+					span 30 мин
+			// warranties-item-end
+	// end section-3
+	// begin section-4
+	section.section-4
+		.container
+			.about-us
+				|Манипулятор (грузоподъёмное устройство) — многозвенный механизм с приводами в каждом суставе. Применяется для подъема и переноса тяжеловесных грузов. Является сбалансированным манипулятором — груз в грузозахватном устройстве удерживается в любом положении неподвижно. Оператор передвигает груз непосредственно, либо с помощью дистанционного управления. В качестве приводов используются электрическое и гидравлическое оборудованиеей.
+				br
+				br
+				|Грузовой автомобиль, оснащённый краном-манипулятором заменяет собой грузовой автомобиль и автокран, что позволяет осуществлять перемещение, загрузку и перевозку тяжёлых грузов более экономно. Бывают ситуации, где автокран не справляется со своей задачей из-за своих габаритов. Краны манипуляторы тяжёлых серий мало распространены в России. Это связано с их стоимостью, отсутствием у российских производителей шасси соответствующей грузоподъемности, а также с некоторыми.
+	// end section-4
+	// begin section-5
+	section.section-5
+		.container
+			.h1 Цены на аренду манипулятора
+			.table-blok
+				table(style='width:100%')
+					tbody
+						tr
+							th наименование тс
+							th стрела
+							th борт
+							th
+								|стоимость 
+								br
+								|сметы от
+							th стоимость за мкад
+						tr
+							td Манипулятор Mitsubishi fuso
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Hyundai HD 120
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Mitsubishi fuso
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Mitsubishi fuso
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Hyundai HD 120
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Mitsubishi fuso
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Mitsubishi fuso
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Hyundai HD 120
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.
+						tr
+							td Манипулятор Mitsubishi fuso
+							td 3 тонн
+							td 3 тонн / 5,2 метров
+							td
+								span 8 800 
+								|руб.
+							td 35 руб.	
+	// end section-5
+	// begin section-6
+	section.section-6
+		.container
+			.row
+				.col-lg-6.col-12.col-md-6.order-2.order-md-1.col-sm-6
+					.h1 Предоставляем все 
+						br
+						|необходимые документы
+					ul.list-document
+						li
+							.icon-document-list
+							|	Счет;
+						li
+							.icon-document-list
+							|	Счет-фактуру;		
+						li
+							.icon-document-list
+							| Справку ЭСМ-7;
+						li
+							.icon-document-list
+							| Акт выполненных работ;
+						li
+							.icon-document-list
+							| Путевой лист;				
+				.col-lg-6.col-md-6.col-12.order-1.order-md-2.col-sm-6
+					img.img-about-one(src="../img/PALF.jpg", alt="")
+	// end section-6
+	// begin section-7
+	section.section-7
+		.container
+			.row
+				.col-lg-5.col-12
+					img.img-about-two(src="../img/Rectangle3.jpg", alt="")
+				.col-lg-7.col-12
+					.about-us
+						|Кран-манипулятор - это грузоподъемное устройство, которое может быть расположено либо за грузовой частью, либо за кабиной водителя. Услуги крана-манипулятора - одна из наиболее востребованных услуг на рынке спецтехники.
+					ul.about-us-list
+						li Высокая маневренность позволяет
+						li - Получить доступ в любой закоулок, сохраняя при этом точность движений при позиционировании груза;
+						li - Делает возможным манипулирование грузом через препятствия;
+						li - Дает возможность работать с грузом, что находятся ниже уровня горизонта, обеспечивает плавное опускание груза без риска повреждения при прикосновении с землей.
+			.row
+				.col-lg-8.col-12.order-2.order-md-1
+					ul.about-us-list-two
+						li Мы сможем загрузить, перевезти и установить на месте грузы любых габаритов
+						li Отвезем и разгрузим стройматериалы, доски, плиты, железобетон, кирпич Аккуратно погрузим и выгрузим станки, оборудование, дорожную технику
+						li Перевезем и установим контейнеры, павильоны и бытовки
+						li Поможем при малоэтажном строительстве, ремонтных работах
+						li Установим рекламный щит, растяжку, баннер.
+						li Мы беремся за работу в таких условиях, где обычный автокран не может подъехать к объекту.
+						li Поможем доставить кольца для колодца, кровельные материалы, окна, опорные балки.
+						li Поможем вывезти лом, щебень и песок.
+						li Наша помощь также может быть полезна при садовых работах, перевозке и высадке деревьев.
+						li Обеспечим перевозку и установку любых сборно-разборных конструкций из дерева, металла, блоков практически любого размера.
+						li Вы сможете доверить нашей технике любые крупногабаритные вещи, не опасаясь за их сохранность
+				.col-lg-4.col-12.order-1.order-md-2
+					img.img-about-three(src="../img/Rectangle3.1.jpg", alt="")
+	// end section-7
+	// begin section-8
+	section.section-8#calc-section
+		.container
+			.cal-wrap
+				.h1.h1_cal калькулятор расчета
+				.row
+					.col-lg-6.col-md-12.col-12.col-sm-12
+						//- select
+						.select-style
+							.select-style_h Выберите манипулятор
+							select#first.js-example-basic-single(name='state')
+								option(value='Выберите манипулятор') Выберите манипулятор
+								option(value='Борт 5т. / Стрела 3т.', data-num='12', data-two='3') Борт 5т. / Стрела 3т.
+								option(value='Борт 5т. / Стрела 5т.', data-num='2', data-two='3') Борт 5т. / Стрела 5т.
+								option(value='Борт 8т. / Стрела 7т.', data-num='3', data-two='3') Борт 8т. / Стрела 7т.
+								option(value='Борт 7т. / Стрела 5т.', data-num='4', data-two='3') Борт 7т. / Стрела 5т.
+								option(value='Борт 10т. / Стрела 7т.', data-num='5', data-two='3') Борт 10т. / Стрела 7т.
+								option(value='Борт 10т. / Стрела 10т.', data-num='6', data-two='3') Борт 10т. / Стрела 10т.
+								option(value='Борт 10т. / Стрела 7т.', data-num='7', data-two='3') Борт 10т. / Стрела 7т.
+								option(value='Борт 20т. / Стрела 7т.', data-num='8', data-two='3') Борт 20т. / Стрела 7т.
+					.col-lg-6.col-md-12.col-12.col-sm-12
+						+b.parameter-wrap.d-flex.justify-content-between
+							+e.item-1
+								|Расстояние от МКАД 
+								span (выгрузка):
+							+e.item-2
+								span#demo 0
+								span км
+						//- input#r1(type='range', min='0', max='100', oninput='fun1()')
+						input#myRange(name='rng', type='range', min='0', max='100', value='0')
+						//- output#demo(for='rng') 0
+				.result-blok.d-flex.align-items-center
+					span.resuld-num
+						|Стоимость услуги:
+					p#resuld-all
+						| 0
+					span.resuld-val
+						| руб
+				include includes/form.pug
+	// end section-8
+	// begin section-9
+	section.section-9
+		.container
+			.h1 О нас
+			.about-us-txt
+				.about-us-txt_p
+					|Компания предлагает 
+					span аренду манипулятора в Москве и МО по выгодным ценам.
+					|В автопарке имеется большой выбор кранов-манипуляторов (КМУ) грузоподъёмностью до 20 тонн, в том числе вездеходы, обладающие повышенной проходимостью тяжёлых участков дорог, манипуляторы с прицепами, монтажными люльками для работ на высоте, пирамидами и другим дополнительным оборудованием. 
+				.about-us-txt_p
+					|Манипулятором управляет водитель-оператор, в качестве вспомогательного персонала могут выступать такелажники. 
+					span Аренда манипулятора актуальна также
+					|при осуществлении высотных монтажных, подъёмных работ, при проведении эвакуационных работ с мест аварий и чрезвычайных событий. С помощью телескопической стрелы груз может перемещаться с места на объект через препятствия.
+				.about-us-txt_p
+					|Аренда манипулятора 
+					span может применяться для транспортировки различных видов грузов: 
+					|стройматериалов, ЖБИ изделий, сыпучих и твёрдых материалов, военной техники (танков, бронетранспортёров), автомобилей, дорожной, сельскохозяйственной, коммунальной техники, промышленного, торгового, медицинского и другого оборудования, модульных зданий, катеров, негабаритных грузов и
+	// end section-9
+	// begin section-10
+	section.section-10
+		.maps-wrap
+			.map-canvas#map-canvas.ymaps-layers-pane
+			.container
+				.contacts-wrap-footer
+					|Контакти
+					+b.cont-blok
+						img(src="../img/loc-icon.svg",  width='15', height='15',alt="")
+						+e.item-1
+							|Адрес
+						+e.item-2
+							|г. Москва, улица Свободы, дом 89
+					+b.cont-blok
+						img(src="../img/mail-icon.svg",  width='15', height='15',alt="")
+						+e.item-1
+							|Почта
+						a(href="#") manipulator199@yandex.ru
+					+b.cont-blok
+						+e.item-1
+							|Телефон
+						img(src="../img/phone-icon.svg",  width='15', height='15',alt="")
+						a(href="#") +7 495 960 14 98
+						br
+						a(href="#") +7 929 674 87 89
+						br
+						a(href="#") +7 903 960 14 98
+	// end section-10
+	.modal-window#modal-window(style='display: none;')
+		.h2 заказ звонка 
+		form.calc(action="sendmail.php" method="post")
+			.row.d-none.d-md-block
+				.col-lg-6
+					.input-h.d-block.d-md-none Введите имя
+				.col-lg-6
+					.input-h.d-block.d-md-none Ваш телефон
+			.row.d-flex.align-items-center
+				.col-lg-6.col-md-6.col-12
+					.input-h Введите имя
+					.input-wrap-modal
+						input.input-form-modal(type="text" placeholder="Имя" name="name")
+						img(src="../img/name.svg", width='18', height='18', alt="")
+				.col-lg-6.col-md-6.col-12
+					.input-h Ваш телефон
+					.input-wrap-modal
+						input.input-form-modal(type="tel" placeholder="Телефон" name="phone" data-req="1")
+						img(src="../img/phone-input.svg", width='18', height='18', alt="")
+					//- input(type="email" placeholder="E-mail" name="email")
+			button#btn-modal(type="submit" class="send" disabled) Отправить заказ
+		+b.checkbox-wrap.d-flex.justify-content-start
+			+e.check-modal
+				.active-check-modal.act
+			+e.txt
+				| Нажимая кнопку “Отправить заказ”, я подтверждаю, что ознакомлен и согласен 
+				br
+				|с условиями политики обработки 
+				a(href="#") персональных данных
+	+b.callback-window(style='display: none;')
+		+e.img(style='background-image: url(img/modal-logo.svg);')
+		+e.h
+			span спасибо!
+		+e.p Наш менеджер скоро свяжется с Вами
+	include includes/footer.pug
+	//- include includes/modals.pug
+	//- include includes/button-menu.pug
+	//- include includes/btns.pug
+
+	

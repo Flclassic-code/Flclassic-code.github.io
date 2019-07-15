@@ -1,0 +1,17 @@
+input:not([type=submit]) {
+	width: 100%;
+	outline: none;
+	display: block;
+}
+
+
+.error {
+	border: 1px solid red !important;
+}
+
+
+
+button:disabled {
+	background-color: #ddd !important;
+	box-shadow: none !important;
+}
