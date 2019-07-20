@@ -1,0 +1,17 @@
+form.mine-form(action="sendmail.php" method="post")
+	.row
+		.col-lg-6.col-md-6.col-sm-12
+			input(type="text" placeholder="Full Name" name="name")
+			//- input(type="tel" placeholder="+7 (___) ___-__-__" name="phone" data-req="1")
+		.col-lg-6.col-md-6.col-sm-12
+			input(type="email" placeholder="E-mail Address" name="email")
+	.row
+		.col-12
+			textarea.textarea( placeholder="Message" name='text')
+	.row
+		.col-12.d-block.d-sm-flex.align-items-sm-center.justify-content-sm-between
+			.checkbox-block.d-flex.align-items-center.justify-content-start
+					input.checkbox#check(type='checkbox', name='check')
+					label(for='check')
+					.checkbox-block__text I like your company
+			button(type="submit" class="send") Send

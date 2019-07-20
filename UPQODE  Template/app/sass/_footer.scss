@@ -1,0 +1,57 @@
+.footer {
+    background-color: #1a1a1a;
+    min-height: 64px;
+    padding: 0 10px;
+}
+
+.copyright {
+    color: #7a7a7a;
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+
+    @include media-breakpoint-down(md) {
+        font-size: 14px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 13px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        font-size: 10px;
+    }
+}
+
+.social-block {
+    @include media-breakpoint-down(sm) {
+        margin: 20px 0 15px 0;
+    }
+
+    a {
+        margin-right: 20px;
+
+        .fa-facebook-f {
+            color: #6782b8;
+        }
+
+        .fa-google-plus-g {
+            color: #d6644e;
+        }
+
+        .fa-twitter {
+            color: #71d6fa;
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        .fa-basketball-ball {
+            color: #e9779d;
+        }
+    }
+}

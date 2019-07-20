@@ -1,0 +1,405 @@
+extends layout/layout
+append config
+	- var pageTitle = 'main-page';
+
+block main
+	include includes/header.pug
+	.section-1.js-section-scroll#home
+		.slider-section-one(style="background-image: url('img/slider-section-one.png')").d-flex.align-items-center.d-lg-block
+			.container
+				+b.slider-content
+					+e.item-head Creative 
+						span Design Agency
+					+e.item-txt
+						|Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+		//- slider-section-one-end
+		.slider-section-one(style="background-image: url('img/slider-section-one.png')").d-flex.align-items-center.d-lg-block
+			.container
+				+b.slider-content
+					+e.item-head Creative 
+						span Design Agency
+					+e.item-txt
+						|Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+		//- slider-section-one-end
+		.slider-section-one(style="background-image: url('img/slider-section-one.png')").d-flex.align-items-center.d-lg-block
+			.container
+				+b.slider-content
+					+e.item-head Creative 
+						span Design Agency
+					+e.item-txt
+						|Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+		//- slider-section-one-end
+	// section-1-end
+	.section-2
+		.container
+			+b.section-head_center
+				+e.item-head
+					|Why 
+					span Choose Us
+				+e.item-txt
+					|Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
+					br
+					|Nullam at scelerisque tellus mattis volutpat rhoncus, 
+			.row.row-us.justify-content-center.justify-content-lg-between
+				.col-auto.col-sm-auto.col-lg-auto.d-flex
+					+b.item-about-us
+						+e.icon
+							i.far.fa-heart
+						+e.head your title
+						+e.txt
+							|Duis bibendum diam non erat facilaisis en ter tincidunt. Duis  
+						+e.hover-about-us
+							+e.header see more
+							+e.hover-see-more-wrap.d-flex.justify-content-center
+								+e.item-1
+									a(href="#")
+										i.fas.fa-share-alt
+								+e.item-2
+									a(href="#")
+										i.fas.fa-search-plus
+					// item-about-us-end
+				.col-auto.col-sm-auto.col-lg-auto.d-flex
+					+b.item-about-us
+						+e.icon
+							i.far.fa-comment-dots
+						+e.head your title
+						+e.txt
+							|Duis bibendum diam non erat facilaisis en ter tincidunt. Duis  
+						+e.hover-about-us
+							+e.header see more
+							+e.hover-see-more-wrap.d-flex.justify-content-center
+								+e.item-1
+									a(href="#")
+										i.fas.fa-share-alt
+								+e.item-2
+									a(href="#")
+										i.fas.fa-search
+					// item-about-us-end
+				.col-auto.col-sm-auto.col-lg-auto.d-flex
+					+b.item-about-us
+						+e.icon
+							i.fas.fa-laptop
+						+e.head your title
+						+e.txt
+							|Duis bibendum diam non erat facilaisis en ter tincidunt. Duis  
+						+e.hover-about-us
+							+e.header see more
+							+e.hover-see-more-wrap.d-flex.justify-content-center
+								+e.item-1
+									a(href="#")
+										i.fas.fa-share-alt
+								+e.item-2
+									a(href="#")
+										i.fas.fa-search
+					// item-about-us-end
+				.col-auto.col-sm-auto.col-lg-auto.d-flex
+					+b.item-about-us
+						+e.icon
+							i.far.fa-star
+						+e.head your title
+						+e.txt
+							|Duis bibendum diam non erat facilaisis en ter tincidunt. Duis  
+						+e.hover-about-us
+							+e.header see more
+							+e.hover-see-more-wrap.d-flex.justify-content-center
+								+e.item-1
+									a(href="#")
+										i.fas.fa-share-alt
+								+e.item-2
+									a(href="#")
+										i.fas.fa-search
+					// item-about-us-end
+				.col-auto.col-sm-auto.col-lg-auto.d-flex
+					+b.item-about-us
+						+e.icon
+							i.far.fa-flag
+						+e.head your title
+						+e.txt
+							|Duis bibendum diam non erat facilaisis en ter tincidunt. Duis  
+						+e.hover-about-us
+							+e.header see more
+							+e.hover-see-more-wrap.d-flex.justify-content-center
+								+e.item-1
+									a(href="#")
+										i.fas.fa-share-alt
+								+e.item-2
+									a(href="#")
+										i.fas.fa-search
+
+	// section-2-end
+	.section-3.js-section-scroll#products(style="background-image: url('img/bg-section-two.png')")
+		+b.section-head-line(style="background-image: url('img/slider-section-one.png')")
+			+e.gradient
+			+e.head
+				|our 
+				span
+					|products
+		//section-head-line-end
+		.section-products-slider
+			.slider-products-item
+				.container
+					.row
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-1.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-2.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-3.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-4.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-5.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-6.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+			// slider-products-item-end
+			.slider-products-item
+				.container
+					.row
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-1.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-2.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-3.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-4.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-5.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-6.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+			// slider-products-item-end
+			.slider-products-item
+				.container
+					.row
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-1.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-2.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-3.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-4.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-5.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+						.col-lg-4.col-md-6.col-sm-6.col-xs-12
+							+b.product-item.d-flex.justify-content-start
+								+e.one-sect
+									img(src="../img/Layer-6.png", alt="img")
+								+e.two-sect
+									+e.h1 title
+									+e.h2 Best Product
+									+e.txt Duis bibendum diam non erat facilaisis en ter
+							// product-iten-end
+			// slider-products-item-end
+	// section-3-end
+	.section-4#about.js-section-scroll
+		.container
+			.row
+				.col-lg-6.col-md-6.col-sm-12
+					+b.section-head_left
+						+e.item-head
+							span about 
+							| us 
+						+e.item-txt
+							|Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus,
+						+e.item-p
+							|Nullam at scelerisque tellus. Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a. Vestibulum accumsan tincidunt odio vel finibus. Phasellus vestibulum lobortis ligula ut volutpat. Maecenas vitae nibh vel purus mollis semper. Nullam tempus feugiat mi id semper. Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam.
+					+b.schedule-box-item
+						+e.section-txt.d-flex.justify-content-between
+							+e.txt PHOTOSHOP
+							+e.txt 79%
+						// section-txt-end
+						+e.section-shedule-border
+							+e.line_one
+					// schedule-box-end
+					+b.schedule-box-item
+						+e.section-txt.d-flex.justify-content-between
+							+e.txt HTML/CSS
+							+e.txt 90%
+						// section-txt-end
+						+e.section-shedule-border
+							+e.line_two
+					// schedule-box-end
+					+b.schedule-box-item
+						+e.section-txt.d-flex.justify-content-between
+							+e.txt JAVASCRIPT
+							+e.txt 69%
+						// section-txt-end
+						+e.section-shedule-border
+							+e.line_three
+					// schedule-box-end
+					+b.schedule-box-item
+						+e.section-txt.d-flex.justify-content-between
+							+e.txt WORDPRESS
+							+e.txt 92%
+						// section-txt-end
+						+e.section-shedule-border
+							+e.line_four
+					// schedule-box-end
+				.col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-end.align-items-lg-end.align-items-center
+					img.about-img(src="../img/ipad.png", alt="img")
+	// section-4-end
+	.section-5.js-section-scroll#map
+		.container
+			+b.section-head_center
+				+e.item-head
+					| get in
+					span touch
+				+e.item-txt
+					|Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
+					br
+					|Nullam at scelerisque tellus mattis volutpat rhoncus,
+			// section-head-end
+		.maps-block
+			iframe(width='700', height='440', src='https://maps.google.com/maps?width=700&height=440&hl=en&q=lviv%20ukraine+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&ie=UTF8&t=&z=13&iwloc=B&output=embed')
+			.container
+				.form-wrap
+					.row
+						.col-lg-8.col-md-8
+							include includes/form.pug
+						.col-lg-4.col-md-4
+							+b.information.d-flex.justify-content-center.flex-column
+								+e.address
+									|69/A, Some Street Name
+									br
+									|Your City, code 01234
+									br
+									|Country Name
+								+e.number
+									+e.number-item
+										a.style(href="#") +880 123 456 78 98
+									+e.number-item
+										a.style(href="#") +860 987 648 74 95
+								+e.emails
+									+e.emails-item
+										a.style(href="#") company@mail.com
+									+e.emails-item
+										a.style(href="#") sales@mail.com
+	// section-5-end
+	include includes/footer.pug
+	//- include includes/modals.pug
+	//- include includes/button-menu.pug
+	//- include includes/btns.pug
+
+
+	
+	

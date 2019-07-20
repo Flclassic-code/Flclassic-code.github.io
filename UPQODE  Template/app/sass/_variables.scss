@@ -1,0 +1,308 @@
+ // BOOTSTRAP
+ $bootstrapV: '4';
+
+ $lg-bp-x2: 1170px;
+ $lg-container-x2: 1140px;
+
+ $lg-bp: if($bootstrapV == '4', map-get($grid-breakpoints, xl), 1170px); 
+ $lg-container: 1140px; 
+
+ $md-bp: if($bootstrapV == '4', map-get($grid-breakpoints, lg), 992px); 
+ $md-container: 970px;
+
+ $sm-bp: if($bootstrapV == '4', map-get($grid-breakpoints, md), 768px);
+ $sm-container: 750px; 
+
+ $bp-xsmall: if($bootstrapV == '4', map-get($grid-breakpoints, sm), 576px);
+
+
+ $bp-blarge:      "only screen and (max-width : $lg-bp-x2 - 1)";
+
+
+ 
+
+  // BOOTSTRAP END
+
+  $maxlg: 1920px;
+  $bpmlg:      "only screen and (max-width : $maxlg )";
+
+
+  $aws: 'font_awesome_5_brandsregular';
+  $lato: 'Lato', sans-serif;
+  $ben1: 'beynoregular';
+
+
+  @function glh($font-size, $line-height) {
+  	@return $line-height / $font-size;
+  }  
+
+
+
+
+
+
+
+  @function decimal-round ($number, $digits: 0, $mode: round) {
+  	$n: 1;
+      // $number must be a number
+      @if type-of($number) != number {
+      	@warn '#{ $number } is not a number.';
+      	@return $number;
+      }
+      // $digits must be a unitless number
+      @if type-of($digits) != number {
+      	@warn '#{ $digits } is not a number.';
+      	@return $number;
+      } @else if not unitless($digits) {
+      	@warn '#{ $digits } has a unit.';
+      	@return $number;
+      }
+      @if $digits > 0 {
+      	@for $i from 1 through $digits {
+      		$n: $n * 10;
+      	}
+      }
+      @if $mode == round {
+      	@return round($number * $n) / $n;
+      } @else if $mode == ceil {
+      	@return ceil($number * $n) / $n;
+      } @else if $mode == floor {
+      	@return floor($number * $n) / $n;
+      } @else {
+      	@warn '#{ $mode } is undefined keyword.';
+      	@return $number;
+      }
+    }
+
+
+    @mixin size-lg($fontsize) {
+    	@include media-breakpoint-down(lg) {
+    		font-size: decimal-round($fontsize / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    	}
+    }
+    @mixin size-md($fontsize) {
+    	@include media-breakpoint-down(md) {
+    		font-size: decimal-round($fontsize / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    	}
+    }
+    @mixin size-sm($fontsize) {
+    	@include media-breakpoint-down(sm) {
+    		font-size: decimal-round($fontsize / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    	}
+    }
+    @mixin mt($size) {
+    	margin-top: $size;
+    	@include media-breakpoint-down(lg) {
+    		margin-top: decimal-round($size / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    	}
+    	@include media-breakpoint-down(md) {
+    		margin-top: decimal-round($size / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    	}
+    	@include media-breakpoint-down(sm) {
+    		margin-top: decimal-round($size / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    	}
+    }
+
+    @mixin mb($size) {
+    	margin-bottom: $size;
+    	@include media-breakpoint-down(lg) {
+    		margin-bottom: decimal-round($size / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    	}
+    	@include media-breakpoint-down(md) {
+    		margin-bottom: decimal-round($size / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    	}
+    	@include media-breakpoint-down(sm) {
+    		margin-bottom: decimal-round($size / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    	}
+    }
+
+
+    @mixin p($paddingTop, $paddingLR: 0, $paddingBottom: 0) {
+    	padding-top: $paddingTop;
+    	@include media-breakpoint-down(lg) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    	}
+    	@include media-breakpoint-down(md) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    	}
+    	@include media-breakpoint-down(sm) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    	}
+    	@if $paddingBottom > 0 {
+    		padding-bottom: $paddingBottom;
+    		@include media-breakpoint-down(lg) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    	} @else {
+    		padding-bottom: 0;
+    	}
+    	@if $paddingLR > 0 {
+    		padding-left: $paddingLR;
+    		padding-right: $paddingLR;
+    		@include media-breakpoint-down(lg) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    	} @else {
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+
+    	
+    }
+
+
+
+    @mixin px($paddingTop, $paddingLR: 0, $paddingBottom: 0) {
+    	padding-top: $paddingTop;
+    	@include media-breakpoint-down(lg) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    	}
+    	@include media-breakpoint-down(md) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    	}
+    	@include media-breakpoint-down(sm) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    	}
+    	@include media-breakpoint-down(xs) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ 320px ));
+    	}
+    	@if $paddingBottom > 0 {
+    		padding-bottom: $paddingBottom;
+    		@include media-breakpoint-down(lg) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    		@include media-breakpoint-down(xs) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ 320px ));
+    		}
+
+    	} @else {
+    		padding-bottom: 0;
+    	}
+    	@if $paddingLR > 0 {
+    		padding-left: $paddingLR;
+    		padding-right: $paddingLR;
+    		@include media-breakpoint-down(lg) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    		@include media-breakpoint-down(xs) {
+    			padding-left: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ 320px ));
+    			padding-right: decimal-round($paddingLR / ( map-get($container-max-widths, xl)/ 320px ));
+    		}
+
+    	} @else {
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+
+    	
+    }
+
+
+
+
+    @mixin pxa($paddingTop, $paddingR: 0, $paddingBottom: 0, $paddingL: 0) {
+    	padding-top: $paddingTop;
+    	@include media-breakpoint-down(lg) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    	}
+    	@include media-breakpoint-down(md) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    	}
+    	@include media-breakpoint-down(sm) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    	}
+    	@include media-breakpoint-down(xs) {
+    		padding-top: decimal-round($paddingTop / ( map-get($container-max-widths, xl)/ 320px ));
+    	}
+    	@if $paddingBottom > 0 {
+    		padding-bottom: $paddingBottom;
+    		@include media-breakpoint-down(lg) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    		@include media-breakpoint-down(xs) {
+    			padding-bottom: decimal-round($paddingBottom / ( map-get($container-max-widths, xl)/ 320px ));
+    		}
+
+    	} @else {
+    		padding-bottom: 0;
+    	}
+    	@if $paddingL > 0 {
+    		padding-left: $paddingL;
+    		@include media-breakpoint-down(lg) {
+    			padding-left: decimal-round($paddingL / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-left: decimal-round($paddingL / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-left: decimal-round($paddingL / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    		@include media-breakpoint-down(xs) {
+    			padding-left: decimal-round($paddingL / ( map-get($container-max-widths, xl)/ 320px ));
+    		}
+
+    	} @else {
+    		padding-left: 0;
+    	}
+
+    	@if $paddingR > 0 {
+    		padding-right: $paddingR;
+    		@include media-breakpoint-down(lg) {
+    			padding-right: decimal-round($paddingR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, lg) ));
+    		}
+    		@include media-breakpoint-down(md) {
+    			padding-right: decimal-round($paddingR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, md) ));
+    		}
+    		@include media-breakpoint-down(sm) {
+    			padding-right: decimal-round($paddingR / ( map-get($container-max-widths, xl)/ map-get($container-max-widths, sm) ));
+    		}
+    		@include media-breakpoint-down(xs) {
+    			padding-right: decimal-round($paddingR / ( map-get($container-max-widths, xl)/ 320px ));
+    		}
+
+    	} @else {
+    		padding-right: 0;
+    	}
+
+    	
+    }
+
+
+
+

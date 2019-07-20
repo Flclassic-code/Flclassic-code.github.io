@@ -1,0 +1,223 @@
+input:not([type=submit]) {
+    width: 100%;
+    outline: none;
+    display: block;
+}
+
+
+.error {
+    border: 1px solid red !important;
+}
+
+
+
+button:disabled {
+    background-color: #ddd !important;
+    box-shadow: none !important;
+}
+
+.form-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px 67px 54px 67px;
+    background-color: #000;
+    opacity: .7;
+    max-width: 945px;
+    min-height: 435px;
+    position: relative;
+    z-index: 10;
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+        padding: 54px 50px;
+        min-height: auto;
+    }
+
+    @include media-breakpoint-down(sm) {}
+
+    @include media-breakpoint-down(xs) {
+        padding: 30px 20px;
+    }
+}
+
+.form-wrap {
+    position: relative;
+    z-index: 20;
+
+
+    input {
+        width: 100%;
+        padding-left: 21px;
+        color: #b7b7b7;
+        font-family: $lato;
+        font-size: 16px;
+        font-weight: 400;
+        background-color: transparent;
+        border: 1px solid #b7b7b7;
+        outline: none;
+        height: 50px;
+
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+            padding-left: 17px;
+            height: 40px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+    }
+
+    input::placeholder {
+        font-family: $lato;
+        font-size: 16px;
+        font-weight: 400;
+        color: #b7b7b7;
+
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+    }
+}
+
+textarea.textarea::placeholder {
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    color: #b7b7b7;
+}
+
+textarea.textarea {
+    margin-top: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 144px;
+    background-color: transparent;
+    border: 1px solid #b7b7b7;
+    outline: none;
+    padding: 9px 21px;
+    color: #b7b7b7;
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    resize: none;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 20px;
+        font-size: 14px;
+        padding: 17px;
+
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+        margin-bottom: 15px;
+        height: 100px;
+    }
+
+}
+
+input.checkbox {
+    display: none;
+}
+
+[id^=c] {
+    display: none !important;
+}
+
+label {
+    position: relative;
+}
+
+[id^=c]+label {
+    display: block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid #b7b7b7;
+    text-align: center;
+    cursor: pointer;
+}
+
+[id^=c]+label:before {
+    content: '\2713';
+    color: #b7b7b7;
+    font-size: 19px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    // -webkit-transform: scale(0);
+    // transform: scale(0);
+    // -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+[id^=c]:checked+label:before {
+    // -webkit-transform: scale(1);
+    // transform: scale(1);
+    display: inline-block;
+    transition: .3s;
+
+
+
+}
+
+.checkbox-block {
+    &__text {
+        height: 15px;
+        color: #b7b7b7;
+        font-family: $lato;
+        font-size: 16px;
+        font-weight: 400;
+        padding-left: 15px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 15px;
+        }
+    }
+}
+
+button.send {
+    width: 122px;
+    height: 50px;
+    background-color: #ffff00;
+    color: #373737;
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .3s;
+
+    @include media-breakpoint-down(xs) {
+        float: right;
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: #ffff2b;
+        transition: .3s;
+    }
+}
+@media (max-width: 340px) {
+    button.send{
+width: 100%;
+height: 45px;
+margin-top: 20px;
+    }
+}
+.mine-form {
+            @include media-breakpoint-up(lg) {
+                         padding-right: 38px;
+
+            }
+}
